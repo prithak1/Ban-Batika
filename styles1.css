@@ -6,34 +6,36 @@
 }
 
 html, body {
-    height: 100%;
+    height: 100%; /* Make sure the body takes up the full screen height */
+    width: 100%; /* Ensure the body width is also 100% */
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Header section (moon image) */
 .header {
     width: 100%;
-    height: 50vh; /* Set the height to 50% of the viewport height */
-    overflow: hidden;
+    height: 50vh; /* The height of the header is 50% of the screen height */
+    overflow: hidden; /* Hide anything outside the bounds of the container */
 }
 
 .moon-image {
     width: 100%;
     height: 100%; /* Make the image fill the container */
-    object-fit: contain; /* Ensure the image fits within the container without cropping */
+    object-fit: cover; /* The image will cover the container without stretching */
 }
 
 /* Main content section (other image) */
 .main-content {
     width: 100%;
-    height: 50vh; /* Set the height to 50% of the viewport height */
-    overflow: hidden;
+    height: 50vh; /* The height of the main content is also 50% of the screen height */
+    overflow: hidden; /* Hide anything outside the bounds of the container */
 }
 
 .other-image {
     width: 100%;
     height: 100%; /* Make the image fill the container */
-    object-fit: contain; /* Ensure the image fits within the container without cropping */
+    object-fit: cover; /* The image will cover the container without stretching */
 }
 
 /* Welcome Message Styling */
