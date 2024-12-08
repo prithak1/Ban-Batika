@@ -1,0 +1,50 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header section (moon image) */
+.header {
+    width: 100%;
+    height: 50vh; /* Set the height to 50% of the viewport height */
+    overflow: hidden;
+}
+
+.moon-image {
+    width: 100%;
+    height: 100%; /* Make the image fill the container */
+    object-fit: contain; /* Ensure the image fits within the container without cropping */
+}
+
+/* Main content section (other image) */
+.main-content {
+    width: 100%;
+    height: 50vh; /* Set the height to 50% of the viewport height */
+    overflow: hidden;
+}
+
+.other-image {
+    width: 100%;
+    height: 100%; /* Make the image fill the container */
+    object-fit: contain; /* Ensure the image fits within the container without cropping */
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    position: absolute; /* Position the welcome message absolutely */
+    top: 50%; /* Align it vertically in the middle of the viewport */
+    left: 50%; /* Align it horizontally in the center */
+    transform: translate(-50%, -50%); /* Shift it by half its width and height to center it */
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Shadow effect to make the text more readable */
+}
