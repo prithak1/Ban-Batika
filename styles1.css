@@ -1,52 +1,161 @@
-/* Basic Reset */
-* {
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Americantypewriter, sans-serif;
+    color: #b45ba2;
 }
 
-html, body {
-    height: 100%; /* Make sure the body takes up the full screen height */
-    width: 100%; /* Ensure the body width is also 100% */
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scrolling */
-}
-
-/* Header section (moon image) */
-.header {
+/* Background Image */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 50vh; /* The height of the header is 50% of the screen height */
-    overflow: hidden; /* Hide anything outside the bounds of the container */
+    height: 100vh; /* Full screen height */
+    background-image: url('ful.jpeg'); /* Default background */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: background-image 0.5s ease; /* Smooth background change */
 }
 
-.moon-image {
-    width: 100%;
-    height: 100%; /* Make the image fill the container */
-    object-fit: cover; /* The image will cover the container without stretching */
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-/* Main content section (other image) */
-.main-content {
-    width: 100%;
-    height: 50vh; /* The height of the main content is also 50% of the screen height */
-    overflow: hidden; /* Hide anything outside the bounds of the container */
+.logo {
+    width: 50px;
+    height: auto;
 }
 
-.other-image {
-    width: 100%;
-    height: 100%; /* Make the image fill the container */
-    object-fit: cover; /* The image will cover the container without stretching */
+.ban h1 {
+    margin-left: 10px;
 }
 
-/* Welcome Message Styling */
+/* Welcome Message */
 .welcome-message {
-    position: absolute; /* Position the welcome message absolutely */
-    top: 50%; /* Align it vertically in the middle of the viewport */
-    left: 50%; /* Align it horizontally in the center */
-    transform: translate(-50%, -50%); /* Shift it by half its width and height to center it */
     text-align: center;
+    margin-top: 9%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    font-size: 3em;
-    font-weight: bold;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Shadow effect to make the text more readable */
+    overflow: hidden;
+    transition: width 0.5s ease;
+    z-index: 2;
+    padding: 0;
+}
+
+.sidebar.open {
+    width: 350px; /* Sidebar expands smoothly */
+}
+
+.sidebar h2, .sidebar p, .small-btn {
+    margin: 20px;
+    display: none;
+}
+
+.sidebar.open h2,
+.sidebar.open p,
+.sidebar.open .small-btn {
+    display: block;
+}
+
+.small-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.small-btn:hover {
+    background-color: #45a049;
+}
+
+/* Button to Open Sidebar */
+.open-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #7d4caf;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.open-btn:hover {
+    background-color: #45a049;
+}
+
+/* Food and Drinks Section */
+.food-drinks-section {
+    margin-top: 70vh; /* Place it lower on the page */
+    padding: 20px;
+    text-align: center;
+    /*background-color: rgba(0, 0, 0, 0.6); /* Slight transparent background */
+}
+
+.food-drinks-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    overflow-y: auto; /* Make the section scrollable if the content overflows */
+}
+
+.foods, .drinks {
+    max-width: 300px;
+    padding: 10px;
+}
+
+.foods h3, .drinks h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.foods ul, .drinks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.foods ul li, .drinks ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Extra Content Image - Initially Hidden */
+.scroll-section {
+    margin-top: 100vh; /* Push this section below the fold */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: none; /* Hidden initially */
+}
+
+.scroll-image {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
