@@ -14,7 +14,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100vh; /* Full screen height */
-    background-image: url('ful.jpeg'); /* Default background */
+    background-image: 'ful.jpeg'; /* Default background */
     background-size: cover;
     background-position: center;
     z-index: -1;
