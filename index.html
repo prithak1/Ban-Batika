@@ -7,20 +7,68 @@
     <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
-    <!-- Header section with the moon image -->
-    <div class="header">
-        <img src="moon_image.jpg" alt="Moon" class="moon-image">
-    </div>
+    <!-- Background Section -->
+    <div class="background" id="background"></div>
 
-    <!-- Main content section with another image below -->
-    <div class="main-content">
-        <img src="other_image.jpg" alt="Other Image" class="other-image">
+    <!-- Logo at the Top Left -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Ban Batika Logo" class="logo">
+        <div class="ban">
+            <h1>Ban Batika</h1>
+        </div>
     </div>
 
     <!-- Welcome Message -->
     <div class="welcome-message">
         <h1>Welcome to Ban Batika</h1>
     </div>
+
+    <!-- Button to Open the Sidebar -->
+    <button class="open-btn" id="openBtn">About Us</button>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <h2>About Us</h2>
+        <p>Welcome to Ban Batika, where we serve the finest dishes made with love. We are a family-owned restaurant committed to providing you with an unforgettable dining experience.</p>
+        <p>Click the button below to change the background!</p>
+        <!-- Small Button to Change Background -->
+        <button class="small-btn" id="changeBackgroundBtn">hm</button>
+    </div>
+
+    <!-- Scrollable Foods & Drinks Section -->
+    <div class="food-drinks-section" id="foodDrinkSection">
+        <h2>Foods & Drinks</h2>
+        <div class="food-drinks-content">
+            <div class="foods">
+                <h3>Foods</h3>
+                <ul>
+                    <li>Chickken Fry Rice: 350</li>
+                    <li>Sliders: 250</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="drinks">
+                <h3>Drinks</h3>
+                <ul>
+                    <li>Americano: 180</li>
+                    <li>Black Masala Tea: 80</li>
+                    <li>Milk Masala Tea: 100</li>
+                    <li>Soft Drinks</li>
+                    <li></li>
+                    <li>Beer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Section with Image (Hidden initially) -->
+    <div class="scroll-section" id="scrollSection">
+        <img src="other.jpg" alt="Other Image" class="scroll-image">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
